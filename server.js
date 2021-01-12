@@ -12,7 +12,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.get("/test", (req, res) => {
+app.get("/Users", (req, res) => {
   res.json({ msg: "testing..." });
 });
 
