@@ -1,6 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
+const Users = require("./Db/Users.json");
+
 //Init express app
 const app = express();
 
@@ -13,7 +15,7 @@ app.use(
 app.use(bodyParser.json());
 
 app.get("/Users", (req, res) => {
-  res.json({ msg: "testing..." });
+  res.json(Users);
 });
 
 const port = process.env.PORT || 5050;
